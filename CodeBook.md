@@ -22,13 +22,12 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 The original data are available in two sets, a training set and a test set. The data are structured like this:
 
-	|	v1	v2	v3	...	v561
------------------------------------------------------
-obs 1	|	x	x	x	...	x
-obs 2	|	x	x	x	...	x
-...	|
-obs N	|	x	x	x	...	x
-
+| | v1 | v2 | v3 | ... | v561 |
+|-|----|----|----|-----|-----------------------------------
+| obs 1 | x | x | x | ... | x |
+| obs 2 | x | x | x | ... | x |
+| ... | | | | ... | |
+| obs N | x | x | x | ... | x |
 
 Each observation belongs to a specific activity (numbered from 1..6) and a specific subject (numbered from 1..30)
 
@@ -36,13 +35,13 @@ Each observation belongs to a specific activity (numbered from 1..6) and a speci
 The resulting dataset gives the average of each variable for each activity and each subject and looks like:
 
 
-subject	  activity	    v1	v2	v3	...	v79
+| subject | activity | v1 | v2 | v3 | ... | v79 |
 ---------------------------------------------------------------------
-1  	  walking	    mean	mean	mean	...	mean
-1  	  walking-upstairs  mean	mean	mean	...	mean
-...	
-...   
-30 	  Laying	    mean	mean	mean	...	mean
+| 1 | walking | mean | mean | mean | ... | mean |
+| 1 | walking-upstairs | mean | mean | mean | ... | mean |
+| ... | | | | | ... | |
+| ... | | | | | ... | |
+| 30 | laying | mean | mean | mean | ... | mean |
 
 
 where:
@@ -55,8 +54,8 @@ In my opinion this set is tidy because it meets the priciples of this module (o.
 
 ### 2. The variables
 The variables in the original data give the:
-* Triaxialacceleration from the accelerometer (total acceleration) and the estimated body acceleration, in standard gravity units
-* Triaxial Angular velocity from the gyroscope, in radians / second
+* Triaxialacceleration from the accelerometer (total acceleration) and the estimated body acceleration, in **standard gravity units**
+* Triaxial Angular velocity from the gyroscope, in **radians / second**
 The variables are normalized and bounded within [-1,1]. 
 
 The variables in the resulting dataset are a subset of the original variables (namely the measurements on the mean and the standard deviation) and give the average of each variable for each activity and each subject.
